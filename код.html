@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <link rel="stylesheet" href="./style2.css">
+</head>
+
+<body>
+   <canvas id="canvas" width="1500" height="1000"></canvas>
+   <header>
+      <div class="header">
+         <h1>персональный сайт v:0.0.1</h1>
+         <p>no css at this point</p>
+      </div>
+   </header>
+   <p>only me,img,and form</p>
+   <img src="картинка.jpg" alt=" ">
+   <form action="#" method="get" enctype="multipart/form-data">
+      <input placeholder="бла бла" type="text" value="" name="data ">
+      <p>сайт лоховской?</p>
+      <input type="radio" checked value="aboba" name="lox">да
+      <input type="radio" value="aboba" name="lox">нет
+      <p>какие язики програмирования вы знаете</p>
+      <p><input type="checkbox" disabled value="biba" name="check1">css(эт не язык)</p>
+      <p><input type="checkbox" disabled value="biba" name="check2">html(эт тоже не язык)(</p>
+      <p><input type="checkbox" value="biba" name="check3">javascript</p>
+      <p><input type="checkbox" value="biba" name="check4">java</p>
+      <p><input type="checkbox" value="biba" name="check5">c#</p>
+      <p><input type="checkbox" value="biba" name="check6">пи пи пу пу пи(никаким)</p>
+      <input type="file" name="foto">
+      <p>кто вы?</p>
+      <select name="who">
+         <option value="me">я?</option>
+         <option value="you">ты?</option>
+         <option value="mama">мам?</option>
+      </select>
+      <button type="submit">отправить</button>
+   </form>
+   <img id="map" width="800" height="800" src="" alt="">
+   <p id="distance"></p>
+   <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+   <script>
+   var canvas = document.getElementById("canvas");
+   var ctx = canvas.getContext("2d");
+   $("html").mousemove(function(event){
+      ctx.beginPath()
+      ctx.arc(event.pageX,event.pageY,5,0,Math.PI*2,true)
+      ctx.fill()
+   })
+   $("html").keydown(function(event){
+      ctx.fillStyle="white"
+   })
+   $("html").keyup(function(event){
+      ctx.fillStyle="black"
+   })
+    
+  
+   </script>
+   </body>
+   </html>
+ 

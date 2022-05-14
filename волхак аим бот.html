@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+</head>
+
+<body>
+   <script>
+      Data = new Date();
+      var Hour = Data.getHours();
+      var Minutes = Data.getMinutes();
+      var user_input = {};
+      var get_ansver = function () {
+         var get_input = prompt("дайте ссылку")
+         return get_input
+      }
+      var get_hours = function () {
+         var get_time_h = prompt("введите час начала")
+         return get_time_h
+      }
+      var get_minutes = function () {
+         var get_time_m = prompt("введите минуты")
+         return get_time_m
+      }
+      var get_input = get_ansver()
+      var get_time_h = get_hours()
+      var get_time_m = get_minutes();
+      if (isNaN(get_time_h)) {
+         alert("введите число");
+      }
+      if (isNaN(get_time_m)) {
+         alert("введите число");
+      }
+      var time_check = function (get_time_h, get_time_m) {
+         if (get_time_h > 24 || get_time_m > 60) {
+            alert("введите верное время");
+         }
+      }
+      var get_time = get_time_h + ":" + get_time_m;
+      var final_var = { "time" : get_time,"input":get_input }
+      var check_time=function(){
+         if(get_time_h==Hour&&get_time_m==Minutes){
+         return false
+   }
+}
+      if(check_time===false){
+         window.location.replace(get_input);
+      }
+   </script>
+</body>
